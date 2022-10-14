@@ -1,7 +1,10 @@
-namespace my.bookshop;
+namespace my.machine;
 
-entity Books {
-  key ID : Integer;
-  title  : String;
-  stock  : Integer;
+
+entity Products {
+    key ID    : UUID;
+        name  : String;
+        desc  : String;
+        price : Decimal(3, 2);
+        stock : Integer;
 }
