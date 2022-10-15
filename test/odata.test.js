@@ -5,8 +5,6 @@ axios.defaults.headers['content-type'] = 'application/json';
 
 beforeAll(async () => {
     const db = await cds.connect.to('db');
-    const { Products } = db.model.entities('my.machine');
-    console.log("Is products undefined? ", Products);
 });
 
 describe('Basic OData', () => {
