@@ -51,11 +51,20 @@
         }
     },
     "cds": {
-        "requires": {
-            "db": {
-                "kind": "sqlite",
-                "credentials": {
-                    "database": "db.sqlite"
+        "[development]": {
+            "requires": {
+                "db": {
+                    "kind": "sqlite",
+                    "credentials": {
+                        "database": "db.sqlite"
+                    }
+                }
+            }
+        },
+        "[production]": {
+            "requires": {
+                "db": {
+                    "kind": "hana-cloud"
                 }
             }
         }
