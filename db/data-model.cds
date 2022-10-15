@@ -1,7 +1,8 @@
 namespace my.machine;
 
+using {managed} from '@sap/cds/common';
 
-entity Products {
+entity Products : managed {
     key ID    : UUID;
         name  : String;
         desc  : String;

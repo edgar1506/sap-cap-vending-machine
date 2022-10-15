@@ -3,6 +3,12 @@ const utils = require("./helpers/utils");
 const { GET, POST, PATCH, axios, expect } = cds.test(__dirname + '/..');
 axios.defaults.headers['content-type'] = 'application/json';
 
+beforeAll(async () => {
+    const db = await cds.connect.to('db');
+    const { Products } = db.model.entities('my.machine');
+    console.log("Is products undefined? ", Products);
+});
+
 describe('Basic OData', () => {
 
     it('serves $metadata documents in v4', async () => {
